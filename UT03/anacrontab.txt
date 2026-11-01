@@ -1,0 +1,15 @@
+# /etc/anacrontab: configuration file for anacron
+
+# See anacron(8) and anacrontab(5) for details.
+
+SHELL=/bin/sh
+HOME=/root
+LOGNAME=root
+
+# These replace cron's entries
+1	5	cron.daily	run-parts --report /etc/cron.daily
+7	10	cron.weekly	run-parts --report /etc/cron.weekly
+@monthly	15	cron.monthly	run-parts --report /etc/cron.monthly
+@yearly	20	cron.yearly	run-parts --report /etc/cron.yearly
+@monthly  10  copia.limpieza  /scromar/limpieza_diferenciales.sh
+@monthly  15  copia.total     /scromar/copia_total.sh

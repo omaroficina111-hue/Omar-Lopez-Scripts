@@ -1,0 +1,6 @@
+[Unit]
+Description=Sincronización espejo del directorio personal de Omar
+
+[Service]
+Type=oneshot
+ExecStart=/home/omaradd/omarsp31-9.sh
